@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+<body background-color="teal">
+<br>
+<div class="login">
+  <h1 css="align='center'">Welcome {{name}} !</h1>
+  <form action="{{ url_for('predict')}}"method="post">
+    <input type='file' accept="audio/*" placeholder="upload a bird audio" class="profile-aud">
+    <input type="submit" class="btn btn-primary btn-block btn-large">
+  </form>
+</div>
+<img src="{{prediction_img}}" alt="{{prediction_img}}">
+</body>
+</html>
